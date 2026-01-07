@@ -19,4 +19,4 @@ Rails.application.config.after_initialize do
   else
     Rails.logger.warn('[Enterprise::Internal::CheckNewVersionsJob] Class not found — patch skipped')
   end
-End
+end
