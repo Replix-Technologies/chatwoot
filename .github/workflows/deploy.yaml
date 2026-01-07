@@ -14,7 +14,7 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy to EC2 via SSH
-        uses: appleboy/ssh-action@v0.1.6
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USERNAME }}
@@ -35,14 +35,14 @@ jobs:
 
             # 3. Pull the latest Docker images (Standard Chatwoot images)
             # If you are using custom built images, this pulls them too
-            docker compose pull
+            docker compose -f docker-compose.production.yaml pull
 
             # 4. Restart containers with the new config/images
-            docker compose up -d
+            docker compose -f docker-compose.production.yaml up -d
 
             # 5. Run Database Migrations (CRITICAL for Chatwoot updates)
             echo "⚙️ Running database migrations..."
-            docker compose exec -T rails bundle exec rails db:chatwoot_prepare
+            docker compose -f docker-compose.production.yaml exec -T rails bundle exec rails db:chatwoot_prepare
 
             # 6. Clean up unused images to save disk space on EC2
             docker image prune -f
