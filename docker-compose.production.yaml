@@ -6,6 +6,8 @@ services:
     env_file: .env
     volumes:
       - storage_data:/app/storage
+      - ./config/initializers/disable_enterprise_version_check_job.rb:/app/config/initializers/disable_enterprise_version_check_job.rb
+      - ./db/migrate/20251004091908_update_account_details.rb:/app/db/migrate/20251004091908_update_account_details.rb
 
   rails:
     <<: *base
