@@ -4,78 +4,99 @@
 @import 'tailwindcss/utilities';
 
 body {
-  font-family: Inter, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-family: "Helvetica", "Helvetica Neue", "Arial", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Tahoma, sans-serif !important;
 }
 
 @layer base {
   // FIXME: Use a common color file for all packs
   // scss-lint:disable PropertySortOrder
+  // REPLIX BRAND COLORS APPLIED (Super Admin)
   :root {
-    --slate-1: 252 252 253;
-    --slate-2: 249 249 251;
-    --slate-3: 240 240 243;
-    --slate-4: 232 232 236;
-    --slate-5: 224 225 230;
-    --slate-6: 217 217 224;
-    --slate-7: 205 206 214;
-    --slate-8: 185 187 198;
-    --slate-9: 139 141 152;
-    --slate-10: 128 131 141;
-    --slate-11: 96 100 108;
-    --slate-12: 28 32 36;
+    // Slate (Neutral UI - Cool Gray based on #F4F6FA)
+    --slate-1: 252 252 253; // White-ish
+    --slate-2: 244 246 250; // Replix Light Gray #F4F6FA (Page Background)
+    --slate-3: 235 238 245;
+    --slate-4: 224 228 238;
+    --slate-5: 212 217 230;
+    --slate-6: 195 202 219;
+    --slate-7: 173 181 204;
+    --slate-8: 143 153 181;
+    --slate-9: 112 122 153;
+    --slate-10: 94 105 138;
+    --slate-11: 71 82 115; // Darker text
+    --slate-12: 30 42 90;  // Replix Blue #1E2A5A (High contrast text)
 
-    --iris-1: 253 253 255;
-    --iris-2: 248 248 255;
-    --iris-3: 240 241 254;
-    --iris-4: 230 231 255;
-    --iris-5: 218 220 255;
-    --iris-6: 203 205 255;
-    --iris-7: 184 186 248;
-    --iris-8: 155 158 240;
-    --iris-9: 91 91 214;
-    --iris-10: 81 81 205;
-    --iris-11: 87 83 198;
-    --iris-12: 39 41 98;
+    // Iris (Innovation/AI - based on Replix Purple #7C7CFF)
+    --iris-1: 250 250 255;
+    --iris-2: 245 245 255;
+    --iris-3: 235 235 255;
+    --iris-4: 225 225 255;
+    --iris-5: 205 205 255;
+    --iris-6: 185 185 255;
+    --iris-7: 160 160 255;
+    --iris-8: 140 140 255;
+    --iris-9: 124 124 255; // Replix Purple #7C7CFF
+    --iris-10: 110 110 245;
+    --iris-11: 90 90 230;
+    --iris-12: 35 35 120;
 
-    --ruby-1: 255 252 253;
-    --ruby-2: 255 247 248;
-    --ruby-3: 254 234 237;
-    --ruby-4: 255 220 225;
-    --ruby-5: 255 206 214;
-    --ruby-6: 248 191 200;
-    --ruby-7: 239 172 184;
-    --ruby-8: 229 146 163;
-    --ruby-9: 229 70 102;
-    --ruby-10: 220 59 93;
-    --ruby-11: 202 36 77;
-    --ruby-12: 100 23 43;
+    // Blue (Brand Identity - based on Replix Blue #1E2A5A)
+    --blue-1: 248 249 253;
+    --blue-2: 240 243 250;
+    --blue-3: 225 231 245;
+    --blue-4: 205 215 240;
+    --blue-5: 180 195 230;
+    --blue-6: 150 170 220;
+    --blue-7: 110 140 200;
+    --blue-8: 70 100 170;
+    --blue-9: 30 42 90;    // Replix Blue #1E2A5A (Primary Brand)
+    --blue-10: 25 35 80;   // Darker hover
+    --blue-11: 20 28 70;
+    --blue-12: 10 15 45;
 
-    --amber-1: 254 253 251;
-    --amber-2: 254 251 233;
-    --amber-3: 255 247 194;
-    --amber-4: 255 238 156;
-    --amber-5: 251 229 119;
-    --amber-6: 243 214 115;
-    --amber-7: 233 193 98;
-    --amber-8: 226 163 54;
-    --amber-9: 255 197 61;
-    --amber-10: 255 186 24;
-    --amber-11: 171 100 0;
-    --amber-12: 79 52 34;
+    // Ruby (Alerts - based on Alert Red #EF4444)
+    --ruby-1: 255 252 252;
+    --ruby-2: 255 245 245;
+    --ruby-3: 255 235 235;
+    --ruby-4: 255 220 220;
+    --ruby-5: 255 200 200;
+    --ruby-6: 255 170 170;
+    --ruby-7: 255 140 140;
+    --ruby-8: 250 100 100;
+    --ruby-9: 239 68 68;   // Alert Red #EF4444
+    --ruby-10: 220 50 50;
+    --ruby-11: 190 30 30;
+    --ruby-12: 100 20 20;
 
-    --teal-1: 250 254 253;
-    --teal-2: 243 251 249;
-    --teal-3: 224 248 243;
-    --teal-4: 204 243 234;
-    --teal-5: 184 234 224;
-    --teal-6: 161 222 210;
-    --teal-7: 131 205 193;
-    --teal-8: 83 185 171;
-    --teal-9: 18 165 148;
-    --teal-10: 13 155 138;
-    --teal-11: 0 133 115;
-    --teal-12: 13 61 56;
+    // Amber (Warning - kept warm but clean)
+    --amber-1: 255 253 251;
+    --amber-2: 255 250 235;
+    --amber-3: 254 243 199;
+    --amber-4: 253 230 138;
+    --amber-5: 252 211 77;
+    --amber-6: 251 191 36;
+    --amber-7: 245 158 11;
+    --amber-8: 217 119 6;
+    --amber-9: 255 186 24;
+    --amber-10: 251 191 36;
+    --amber-11: 180 83 9;
+    --amber-12: 120 53 15;
 
+    // Teal (Primary CTA - based on Replix Teal #2ED3C6)
+    --teal-1: 248 255 254;
+    --teal-2: 240 253 251;
+    --teal-3: 225 250 248;
+    --teal-4: 200 248 242;
+    --teal-5: 160 240 232;
+    --teal-6: 120 230 220;
+    --teal-7: 80 220 210;
+    --teal-8: 55 215 205;
+    --teal-9: 46 211 198;  // Replix Teal #2ED3C6 (Primary CTA)
+    --teal-10: 40 190 180; // Hover
+    --teal-11: 13 150 138;
+    --teal-12: 5 60 55;
+
+    // Gray
     --gray-1: 252 252 252;
     --gray-2: 249 249 249;
     --gray-3: 240 240 240;
@@ -89,94 +110,116 @@ body {
     --gray-11: 100 100 100;
     --gray-12: 32 32 32;
 
-    --background-color: 253 253 253;
-    --text-blue: 8 109 224;
+    // Semantic mappings
+    --background-color: 244 246 250; // Replix Light Gray #F4F6FA
+    --text-blue: 30 42 90;           // Replix Blue #1E2A5A
     --border-container: 236 236 236;
     --border-strong: 235 235 235;
     --border-weak: 234 234 234;
+
     --solid-1: 255 255 255;
     --solid-2: 255 255 255;
     --solid-3: 255 255 255;
     --solid-active: 255 255 255;
-    --solid-amber: 252 232 193;
-    --solid-blue: 218 236 255;
-    --solid-iris: 230 231 255;
+    --solid-amber: 254 243 199;
+    --solid-blue: 225 231 245;
+    --solid-iris: 235 235 255;
 
-    --alpha-1: 67, 67, 67, 0.06;
+    --alpha-1: 30, 42, 90, 0.06; // Tinted with Replix Blue
     --alpha-2: 201, 202, 207, 0.15;
     --alpha-3: 255, 255, 255, 0.96;
     --black-alpha-1: 0, 0, 0, 0.12;
     --black-alpha-2: 0, 0, 0, 0.04;
-    --border-blue: 39, 129, 246, 0.5;
+    --border-blue: 30, 42, 90, 0.5; // Replix Blue border
     --white-alpha: 255, 255, 255, 0.8;
   }
 
   .dark {
-    --slate-1: 17 17 19;
-    --slate-2: 24 25 27;
-    --slate-3: 33 34 37;
-    --slate-4: 39 42 45;
-    --slate-5: 46 49 53;
-    --slate-6: 54 58 63;
-    --slate-7: 67 72 78;
-    --slate-8: 90 97 105;
-    --slate-9: 105 110 119;
-    --slate-10: 119 123 132;
-    --slate-11: 176 180 186;
-    --slate-12: 237 238 240;
+    // Slate (Dark Mode Backgrounds - Navy tinted)
+    --slate-1: 10 13 25;   // Deep Navy Background
+    --slate-2: 15 20 35;
+    --slate-3: 20 28 45;
+    --slate-4: 30 42 90;   // Replix Blue as UI element
+    --slate-5: 45 55 100;
+    --slate-6: 60 70 120;
+    --slate-7: 80 90 140;
+    --slate-8: 100 110 160;
+    --slate-9: 130 140 180;
+    --slate-10: 160 170 200;
+    --slate-11: 200 210 230;
+    --slate-12: 244 246 250; // Light Gray text
 
-    --iris-1: 19 19 30;
-    --iris-2: 23 22 37;
-    --iris-3: 32 34 72;
-    --iris-4: 38 42 101;
-    --iris-5: 48 51 116;
-    --iris-6: 61 62 130;
-    --iris-7: 74 74 149;
-    --iris-8: 89 88 177;
-    --iris-9: 91 91 214;
-    --iris-10: 84 114 228;
-    --iris-11: 158 177 255;
-    --iris-12: 224 223 254;
+    // Iris (Dark Mode AI - Lighter Purple for contrast)
+    --iris-1: 20 20 40;
+    --iris-2: 30 30 55;
+    --iris-3: 45 45 80;
+    --iris-4: 60 60 110;
+    --iris-5: 75 75 140;
+    --iris-6: 90 90 170;
+    --iris-7: 110 110 200;
+    --iris-8: 130 130 230;
+    --iris-9: 124 124 255; // Replix Purple #7C7CFF
+    --iris-10: 145 145 255;
+    --iris-11: 180 180 255;
+    --iris-12: 230 230 255;
 
-    --ruby-1: 25 17 19;
-    --ruby-2: 30 21 23;
-    --ruby-3: 58 20 30;
-    --ruby-4: 78 19 37;
-    --ruby-5: 94 26 46;
-    --ruby-6: 111 37 57;
-    --ruby-7: 136 52 71;
-    --ruby-8: 179 68 90;
-    --ruby-9: 229 70 102;
-    --ruby-10: 236 90 114;
-    --ruby-11: 255 148 157;
-    --ruby-12: 254 210 225;
+    // Blue
+    --blue-1: 8 12 25;
+    --blue-2: 12 18 35;
+    --blue-3: 15 25 50;
+    --blue-4: 20 35 70;
+    --blue-5: 30 42 90;    // Replix Blue
+    --blue-6: 45 60 120;
+    --blue-7: 60 80 150;
+    --blue-8: 80 110 190;
+    --blue-9: 39 129 246;  // Brighter blue for visibility on dark
+    --blue-10: 60 145 255;
+    --blue-11: 126 182 255;
+    --blue-12: 205 227 255;
 
-    --amber-1: 22 18 12;
-    --amber-2: 29 24 15;
-    --amber-3: 48 32 8;
-    --amber-4: 63 39 0;
-    --amber-5: 77 48 0;
-    --amber-6: 92 61 5;
-    --amber-7: 113 79 25;
-    --amber-8: 143 100 36;
+    // Ruby (Dark Mode Alert)
+    --ruby-1: 35 15 15;
+    --ruby-2: 50 20 20;
+    --ruby-3: 70 25 25;
+    --ruby-4: 90 30 30;
+    --ruby-5: 120 40 40;
+    --ruby-6: 150 50 50;
+    --ruby-7: 180 60 60;
+    --ruby-8: 210 65 65;
+    --ruby-9: 239 68 68;   // Alert Red
+    --ruby-10: 255 90 90;
+    --ruby-11: 255 150 150;
+    --ruby-12: 255 210 210;
+
+    // Amber
+    --amber-1: 30 20 10;
+    --amber-2: 45 30 15;
+    --amber-3: 60 40 20;
+    --amber-4: 80 50 25;
+    --amber-5: 100 65 30;
+    --amber-6: 120 80 35;
+    --amber-7: 150 100 45;
+    --amber-8: 180 120 50;
     --amber-9: 255 197 61;
     --amber-10: 255 214 10;
     --amber-11: 255 202 22;
     --amber-12: 255 231 179;
 
-    --teal-1: 13 21 20;
-    --teal-2: 17 28 27;
-    --teal-3: 13 45 42;
-    --teal-4: 2 59 55;
-    --teal-5: 8 72 67;
-    --teal-6: 20 87 80;
-    --teal-7: 28 105 97;
-    --teal-8: 32 126 115;
-    --teal-9: 18 165 148;
-    --teal-10: 14 179 158;
-    --teal-11: 11 216 182;
-    --teal-12: 173 240 221;
+    // Teal (Dark Mode CTA)
+    --teal-1: 10 25 23;
+    --teal-2: 15 35 32;
+    --teal-3: 20 45 42;
+    --teal-4: 25 60 55;
+    --teal-5: 30 80 75;
+    --teal-6: 35 100 95;
+    --teal-7: 40 130 125;
+    --teal-8: 45 160 155;
+    --teal-9: 46 211 198;  // Replix Teal
+    --teal-10: 60 225 210;
+    --teal-11: 100 245 235;
+    --teal-12: 180 250 245;
 
+    // Gray
     --gray-1: 17 17 17;
     --gray-2: 25 25 25;
     --gray-3: 34 34 34;
@@ -190,21 +233,22 @@ body {
     --gray-11: 180 180 180;
     --gray-12: 238 238 238;
 
-    --background-color: 18 18 19;
+    --background-color: 10 13 25; // Deep Navy Background
     --border-strong: 52 52 52;
-    --border-weak: 38 38 42;
-    --solid-1: 23 23 26;
-    --solid-2: 29 30 36;
-    --solid-3: 44 45 54;
-    --solid-active: 53 57 66;
+    --border-weak: 30 42 90;      // Blue tint border
+    
+    --solid-1: 15 20 35;
+    --solid-2: 20 28 45;
+    --solid-3: 30 42 90;
+    --solid-active: 45 60 120;
     --solid-amber: 42 37 30;
-    --solid-blue: 16 49 91;
-    --solid-iris: 38 42 101;
+    --solid-blue: 30 42 90;
+    --solid-iris: 60 60 110;
     --text-blue: 126 182 255;
 
-    --alpha-1: 36, 36, 36, 0.8;
+    --alpha-1: 30, 42, 90, 0.8;
     --alpha-2: 139, 147, 182, 0.15;
-    --alpha-3: 36, 38, 45, 0.9;
+    --alpha-3: 20, 28, 45, 0.9;
     --black-alpha-1: 0, 0, 0, 0.3;
     --black-alpha-2: 0, 0, 0, 0.2;
     --border-blue: 39, 129, 246, 0.5;
