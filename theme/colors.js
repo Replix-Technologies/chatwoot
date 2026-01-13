@@ -15,18 +15,18 @@ const {
 
 export const colors = {
   woot: {
-    25: blue.blue2,
-    50: blue.blue3,
-    75: blue.blue4,
-    100: blue.blue5,
-    200: blue.blue7,
-    300: blue.blue8,
-    400: blueDark.blue11,
-    500: blueDark.blue10,
-    600: blueDark.blue9,
-    700: blueDark.blue8,
-    800: blueDark.blue6,
-    900: blueDark.blue2,
+    25: '#F2FFFD',
+    50: '#E6FFFA',
+    75: '#CCFBF1',
+    100: '#99F6E4',
+    200: '#5EEAD4',
+    300: '#2DD4BF',
+    400: '#14B8A6',
+    500: '#2ED3C6', // Replix Accent Teal
+    600: '#0D9488',
+    700: '#0F766E',
+    800: '#115E59',
+    900: '#134E4A',
   },
   green: {
     50: greenDark.green12,
@@ -79,16 +79,16 @@ export const colors = {
     900: slateDark.slate2,
   },
   red: {
-    50: redDark.red12,
-    100: red.red6,
-    200: red.red8,
-    300: redDark.red11,
-    400: redDark.red10,
-    500: red.red9,
-    600: red.red10,
-    700: red.red11,
-    800: redDark.red8,
-    900: red.red12,
+    50: '#FEF2F2',
+    100: '#FEE2E2',
+    200: '#FECACA',
+    300: '#FCA5A5',
+    400: '#F87171',
+    500: '#EF4444', // Replix Alert
+    600: '#DC2626',
+    700: '#B91C1C',
+    800: '#991B1B',
+    900: '#7F1D1D',
   },
   violet: {
     50: violet.violet1,
@@ -211,7 +211,7 @@ export const colors = {
     },
 
     black: '#000000',
-    brand: '#2781F6',
+    brand: '#1E2A5A', // Replix Primary
     background: 'rgb(var(--background-color) / <alpha-value>)',
     solid: {
       1: 'rgb(var(--solid-1) / <alpha-value>)',
